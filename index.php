@@ -13,13 +13,13 @@
 
     <h2>Menu</h2>
 
-     <a href="cadastrar.php">Cadastrar animais</a>
+     <a href="../cadastrar.php">Cadastrar animais</a>
 
-     <a href="list.php">Listar animais</a>
+     <a href="../list.php">Listar animais</a>
 
-    <a href="editar.php">editar animais</a>
+    <a href="../editar.php">editar animais</a>
 
-    <a href="excluir.php"> excluir animais</a>
+    <a href="../excluir.php"> excluir animais</a>
 
 
 </body>
