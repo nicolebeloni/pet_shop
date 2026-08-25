@@ -1,4 +1,4 @@
-create database pet_shop
+create database pet_shop;
 use pet_shop;
 
 create table usuarios (
@@ -9,13 +9,11 @@ create table usuarios (
 
 create table animal (
     id int auto_increment primary key,
-    usuario_id int not null,
     nome varchar(100) not null,
-    descricao text not null,
-    preco decimal(10,2) not null,
-    categoria varchar(100) not null
+    especie varchar(100) not null,
+    raca varchar(100) not null,
+    idade int not null,
 
-    constraint fk_animal_usuarios
-        foreign key (usuario_id)
-        references usuarios(id)
+    usuario_id int not null,
+    foreign key (usuario_id) references usuarios(id)
 );

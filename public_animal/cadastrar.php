@@ -2,16 +2,20 @@
 
 include "../infra/conexao.php";
 
-$nome = $_POST["nome"];
-$tipo = $_POST["tipo"];
-$raca = $_POST["raca"];
-$idade = $_POST["idade"];
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+   $nome = $_POST["nome"];
+    $tipo = $_POST["tipo"];
+    $raca = $_POST["raca"];
+    $idade = $_POST["idade"];
 
-$sql = "INSERT INTO animal (nome,tipo,raca,idade) VALUES ('$nome','$tipo','$raca','$idade')";
+    $sql = "INSERT INTO animal (nome,tipo,raca,idade) VALUES ('$nome','$tipo','$raca','$idade')";
 
-mysqli_query($conexao, $sql);
+    mysqli_query($conexao, $sql);
 
-header("Location: ../index.php");
+    header("Location: ../index.php");
+}
+
+
 ?>
 
 <!DOCTYPE html>

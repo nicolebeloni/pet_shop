@@ -2,6 +2,7 @@
 
 include "../infra/conexao.php";
 
+if($_SERVER["REQUEST_METHOD"] == "POST") {
 $nome = $_POST["nome"];
 $email = $_POST["email"];
 
@@ -10,6 +11,7 @@ $sql = "INSERT INTO usuarios (nome,email) VALUES ('$nome','$email')";
 mysqli_query($conexao, $sql);
 
 header("Location: ../index.php");
+}
 ?>
 
 <!DOCTYPE html>
